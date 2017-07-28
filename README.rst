@@ -1,6 +1,8 @@
 ===========
 qgeneration
 ===========
+.. image:: https://travis-ci.org/KirovVerst/qgeneration.svg?branch=master
+    :target: https://travis-ci.org/KirovVerst/qgeneration
 Data generation library
 
 ------------
