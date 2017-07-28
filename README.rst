@@ -1,4 +1,8 @@
-# qgeneration
+***********
+qgeneration
+***********
 Data generation library
-## Licensing
+
+Licensing
+#########
 The code in this project is licensed under MIT license.
