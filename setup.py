@@ -13,7 +13,7 @@ setup(
     description='Data generation project',
     long_description=long_description,
     url='https://github.com/KirovVerst/qgeneration',
-    author='Azat Abubakirov',
+    author='KirovVerst',
     author_email='kirov.verst@gmail.com',
     license='MIT',
     classifiers=[
