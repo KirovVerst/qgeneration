@@ -3,10 +3,19 @@ qgeneration
 ===========
 Data generation library
 
+------------
 Installation
 ------------
+.. code-block:: bash
 
-:code:`$ pip install qgeneration`
+  $ pip install qgeneration
+  
+-------
+Testing
+-------
+.. code-block:: bash
+
+  $ python setup.py test
 
 ---------
 Licensing
