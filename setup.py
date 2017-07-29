@@ -9,7 +9,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='qgeneration',
-    version='0.0a1',
+    version='0.1a1',
     description='Data generation project',
     long_description=long_description,
     url='https://github.com/KirovVerst/qgeneration',
