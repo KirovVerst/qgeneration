@@ -46,5 +46,5 @@ class DateField(BaseField):
     def generate(self):
         delta = self.finish - self.start
         days = random.randint(0, delta.days)
-        result_date = self.start + datetime.datetime(year=0, month=0, day=days)
+        result_date = self.start + datetime.timedelta(days=days)
         return result_date
