@@ -5,7 +5,7 @@ FIRST_NAME_FIELD_TYPE = 0
 LAST_NAME_FIELD_TYPE = 1
 DATE_FIELD_TYPE = 2
 
-DATA = {
+DATASET = {
     FIRST_NAME_FIELD_TYPE: ['Arya', 'Jon', 'Sansa', 'Ned', 'Kate', 'Bran', 'Robb', 'Rickon', 'Jame'],
     LAST_NAME_FIELD_TYPE: ['Stark', 'Lanister', 'Baratheon', 'Targarien']
 }
@@ -23,17 +23,17 @@ class CountryRelatedField(BaseField):
         self.country = country
 
     def generate(self):
-        return DATA[self.type][random.randint(0, len(DATA[self.type]))]
+        return DATASET[self.type][random.randint(0, len(DATASET[self.type]) - 1)]
 
 
 class FirstNameField(CountryRelatedField):
-    def __init__(self, name, country):
+    def __init__(self, name, country=None):
         self.country = country
         super(FirstNameField, self).__init__(name, FIRST_NAME_FIELD_TYPE, country)
 
 
 class LastNameField(CountryRelatedField):
-    def __init__(self, name, country):
+    def __init__(self, name, country=None):
         super(LastNameField, self).__init__(name, LAST_NAME_FIELD_TYPE, country)
 
 
