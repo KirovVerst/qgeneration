@@ -4,7 +4,7 @@ qgeneration
 
 Data generation library
 
-|pypi| |travis| |license|
+|pypi| |coveralls| |travis| |license|
 
 ------------
 Installation
@@ -37,3 +37,9 @@ The code in this project is licensed under MIT license.
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
     :target: https://raw.githubusercontent.com/kirovverst/qgeneration/master/LICENSE.txt
     :alt: Package license
+    
+.. |coveralls| image:: https://coveralls.io/repos/github/KirovVerst/qgeneration/badge.svg?branch=master
+    :target: https://coveralls.io/github/KirovVerst/qgeneration?branch=master
+
+
+    
