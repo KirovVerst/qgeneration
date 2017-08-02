@@ -23,4 +23,4 @@ class QRecordsTestCase(TestCase):
         person = qrecords.PersonQRecord('my_person')
         data = person.generate()
         self.assertEqual(len(data), 4)
-        self.assertEquals(data[0], 1)
+        self.assertEqual(data[0], 1)
