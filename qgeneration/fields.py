@@ -11,13 +11,13 @@ DATASET = {
 }
 
 
-class BaseQField:
+class BaseField:
     def __init__(self, name, field_type):
         self.name = name
         self.type = field_type
 
 
-class CountryRelatedQField(BaseQField):
+class CountryRelatedField(BaseField):
     def __init__(self, name, field_type, country):
         """
         Field that is depended on selected country
@@ -25,7 +25,7 @@ class CountryRelatedQField(BaseQField):
         :param field_type: int
         :param country:
         """
-        super(CountryRelatedQField, self).__init__(name, field_type)
+        super(CountryRelatedField, self).__init__(name, field_type)
         self.country = country
 
     def generate(self):
@@ -36,7 +36,7 @@ class CountryRelatedQField(BaseQField):
         return DATASET[self.type][random.randint(0, len(DATASET[self.type]) - 1)]
 
 
-class FirstNameQField(CountryRelatedQField):
+class FirstNameField(CountryRelatedField):
     def __init__(self, name, country=None):
         """
 
@@ -44,20 +44,20 @@ class FirstNameQField(CountryRelatedQField):
         :param country:
         """
         self.country = country
-        super(FirstNameQField, self).__init__(name, FIRST_NAME_FIELD_TYPE, country)
+        super(FirstNameField, self).__init__(name, FIRST_NAME_FIELD_TYPE, country)
 
 
-class LastNameQField(CountryRelatedQField):
+class LastNameField(CountryRelatedField):
     def __init__(self, name, country=None):
         """
 
         :param name: str
         :param country:
         """
-        super(LastNameQField, self).__init__(name, LAST_NAME_FIELD_TYPE, country)
+        super(LastNameField, self).__init__(name, LAST_NAME_FIELD_TYPE, country)
 
 
-class DateQField(BaseQField):
+class DateField(BaseField):
     def __init__(self, name, start, finish):
         """
 
@@ -66,7 +66,7 @@ class DateQField(BaseQField):
         :param finish: datetime.date
         """
 
-        super(DateQField, self).__init__(name, DATE_FIELD_TYPE)
+        super(DateField, self).__init__(name, DATE_FIELD_TYPE)
         self.start_date = start
         self.finish_date = finish
 
